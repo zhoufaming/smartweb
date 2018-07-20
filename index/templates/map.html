@@ -1,0 +1,665 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>地图插件</title>
+    <link rel="stylesheet" href="{% static 'frame/layui/css/layui.css' %}">
+    <link rel="stylesheet" href="stack/frame/static/css/style.css">
+    <link rel="icon" href="stack/frame/static/image/code.png">
+</head>
+<body class="body">
+
+<!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+<div id="main-line" style="width: 100%;height:400px;"></div>
+
+<div id="main-bing" style="width: 100%;height:400px;"></div>
+
+<script type="text/javascript" src="stack/frame/layui/layui.js"></script>
+<script type="text/javascript" src="stack/frame/echarts/echarts.min.js"></script>
+<script type="text/javascript">
+
+    // 基于准备好的dom，初始化echarts实例
+    var myChart = echarts.init(document.getElementById('main-line'), 'light', {renderer: 'canvas'});
+
+    // 使用刚指定的配置项和数据显示图表。
+   var option_f9883ff1f426403e8569bed035c10301 = {
+    "yAxis": [
+        {
+            "nameLocation": "middle", 
+            "axisTick": {
+                "alignWithLabel": false
+            }, 
+            "inverse": false, 
+            "show": true, 
+            "axisLabel": {
+                "textStyle": {
+                    "fontSize": 12
+                }, 
+                "interval": "auto", 
+                "margin": 8, 
+                "rotate": 0, 
+                "formatter": "{value} "
+            }, 
+            "splitLine": {
+                "show": true
+            }, 
+            "boundaryGap": true, 
+            "nameTextStyle": {
+                "fontSize": 14
+            }, 
+            "nameGap": 25, 
+            "type": "value"
+        }
+    ], 
+    "color": [
+        "#c23531", 
+        "#2f4554", 
+        "#61a0a8", 
+        "#d48265", 
+        "#749f83", 
+        "#ca8622", 
+        "#bda29a", 
+        "#6e7074", 
+        "#546570", 
+        "#c4ccd3", 
+        "#f05b72", 
+        "#ef5b9c", 
+        "#f47920", 
+        "#905a3d", 
+        "#fab27b", 
+        "#2a5caa", 
+        "#444693", 
+        "#726930", 
+        "#b2d235", 
+        "#6d8346", 
+        "#ac6767", 
+        "#1d953f", 
+        "#6950a1", 
+        "#918597", 
+        "#f6f5ec"
+    ], 
+    "series": [
+        {
+            "seriesId": 3965333, 
+            "markLine": {
+                "data": []
+            }, 
+            "name": "2018-07-12\u5b9e\u9645\u91cf", 
+            "barCategoryGap": "20%", 
+            "type": "bar", 
+            "label": {
+                "emphasis": {
+                    "textStyle": {
+                        "fontSize": 12
+                    }, 
+                    "show": true
+                }, 
+                "normal": {
+                    "position": "top", 
+                    "show": false, 
+                    "textStyle": {
+                        "fontSize": 12
+                    }
+                }
+            }, 
+            "markPoint": {
+                "data": []
+            }, 
+            "data": [
+                3881.0, 
+                75665.0, 
+                277899.0, 
+                268838.0, 
+                258365.0, 
+                7831.0, 
+                246242.0, 
+                71784.0, 
+                7061.0, 
+                74141.0, 
+                95267.0, 
+                220828.0, 
+                88816.0, 
+                95973.0, 
+                7049.0, 
+                92919.0, 
+                271152.0, 
+                94903.0, 
+                98890.0, 
+                104947.0, 
+                271220.0, 
+                96117.0, 
+                7623.0, 
+                273697.0, 
+                72801.0, 
+                9496.0, 
+                69753.0, 
+                72854.0, 
+                267217.0, 
+                211734.0, 
+                272008.0, 
+                69537.0, 
+                444810.0, 
+                68355.0, 
+                274905.0, 
+                92674.0, 
+                93030.0, 
+                8027.0, 
+                5500.0, 
+                109735.0, 
+                266540.0, 
+                231819.0, 
+                0.0, 
+                7466.0, 
+                96322.0, 
+                95379.0, 
+                74635.0, 
+                90783.0, 
+                6211.0, 
+                265173.0, 
+                1752.0, 
+                239602.0, 
+                405011.0, 
+                215949.0, 
+                279189.0, 
+                441269.0, 
+                5076.0, 
+                416853.0, 
+                281431.0, 
+                78581.0, 
+                105618.0, 
+                71822.0, 
+                74946.0, 
+                217197.0
+            ]
+        }, 
+        {
+            "seriesId": 3965333, 
+            "markLine": {
+                "data": []
+            }, 
+            "name": "2018-07-12\u91c7\u96c6\u91cf", 
+            "barCategoryGap": "20%", 
+            "type": "bar", 
+            "label": {
+                "emphasis": {
+                    "textStyle": {
+                        "fontSize": 12
+                    }, 
+                    "show": true
+                }, 
+                "normal": {
+                    "position": "top", 
+                    "show": false, 
+                    "textStyle": {
+                        "fontSize": 12
+                    }
+                }
+            }, 
+            "markPoint": {
+                "data": []
+            }, 
+            "data": [
+                3881.0, 
+                75665.0, 
+                277899.0, 
+                268838.0, 
+                258365.0, 
+                7831.0, 
+                246242.0, 
+                71784.0, 
+                7061.0, 
+                74141.0, 
+                95267.0, 
+                220828.0, 
+                88816.0, 
+                95973.0, 
+                7049.0, 
+                92919.0, 
+                271152.0, 
+                94903.0, 
+                98890.0, 
+                246101.0, 
+                271220.0, 
+                96117.0, 
+                7623.0, 
+                273697.0, 
+                72801.0, 
+                9496.0, 
+                69753.0, 
+                72854.0, 
+                267217.0, 
+                211734.0, 
+                272008.0, 
+                69537.0, 
+                444810.0, 
+                68355.0, 
+                274905.0, 
+                92674.0, 
+                93030.0, 
+                8027.0, 
+                5500.0, 
+                241960.0, 
+                266540.0, 
+                429672.0, 
+                0.0, 
+                7466.0, 
+                96322.0, 
+                95379.0, 
+                74635.0, 
+                90783.0, 
+                6211.0, 
+                265173.0, 
+                1752.0, 
+                239602.0, 
+                405011.0, 
+                416722.0, 
+                279189.0, 
+                441269.0, 
+                8077.0, 
+                416853.0, 
+                281431.0, 
+                78581.0, 
+                246026.0, 
+                71822.0, 
+                74946.0, 
+                411008.0
+            ]
+        }, 
+        {
+            "seriesId": 3965333, 
+            "markLine": {
+                "data": []
+            }, 
+            "name": "2018-07-12ES\u6570\u636e\u91cf", 
+            "barCategoryGap": "20%", 
+            "type": "bar", 
+            "label": {
+                "emphasis": {
+                    "textStyle": {
+                        "fontSize": 12
+                    }, 
+                    "show": true
+                }, 
+                "normal": {
+                    "position": "top", 
+                    "show": false, 
+                    "textStyle": {
+                        "fontSize": 12
+                    }
+                }
+            }, 
+            "markPoint": {
+                "data": []
+            }, 
+            "data": [
+                3881.0, 
+                75665.0, 
+                277899.0, 
+                268838.0, 
+                258365.0, 
+                7831.0, 
+                246242.0, 
+                71784.0, 
+                7061.0, 
+                74141.0, 
+                95267.0, 
+                220830.0, 
+                88816.0, 
+                95973.0, 
+                7049.0, 
+                92919.0, 
+                271152.0, 
+                94903.0, 
+                98890.0, 
+                246101.0, 
+                271220.0, 
+                96117.0, 
+                7622.0, 
+                273697.0, 
+                72801.0, 
+                9496.0, 
+                69753.0, 
+                72854.0, 
+                267217.0, 
+                211734.0, 
+                272008.0, 
+                69537.0, 
+                444810.0, 
+                68355.0, 
+                274905.0, 
+                92674.0, 
+                93030.0, 
+                8027.0, 
+                5500.0, 
+                241960.0, 
+                266540.0, 
+                429672.0, 
+                0.0, 
+                7466.0, 
+                96322.0, 
+                42797.0, 
+                74635.0, 
+                90782.0, 
+                6211.0, 
+                265173.0, 
+                1752.0, 
+                239602.0, 
+                405011.0, 
+                416722.0, 
+                279189.0, 
+                441269.0, 
+                8077.0, 
+                416851.0, 
+                281431.0, 
+                78581.0, 
+                246026.0, 
+                71822.0, 
+                74946.0, 
+                411008.0
+            ]
+        }, 
+        {
+            "seriesId": 3965333, 
+            "markLine": {
+                "data": []
+            }, 
+            "name": "2018-07-12HDFS\u6570\u636e\u91cf", 
+            "barCategoryGap": "20%", 
+            "type": "bar", 
+            "label": {
+                "emphasis": {
+                    "textStyle": {
+                        "fontSize": 12
+                    }, 
+                    "show": true
+                }, 
+                "normal": {
+                    "position": "top", 
+                    "show": false, 
+                    "textStyle": {
+                        "fontSize": 12
+                    }
+                }
+            }, 
+            "markPoint": {
+                "data": []
+            }, 
+            "data": [
+                3881.0, 
+                75665.0, 
+                277899.0, 
+                268838.0, 
+                258365.0, 
+                7831.0, 
+                246242.0, 
+                71784.0, 
+                7061.0, 
+                74141.0, 
+                95267.0, 
+                220830.0, 
+                88816.0, 
+                95973.0, 
+                7049.0, 
+                92919.0, 
+                271152.0, 
+                94903.0, 
+                98890.0, 
+                246101.0, 
+                271220.0, 
+                96117.0, 
+                7622.0, 
+                273697.0, 
+                72801.0, 
+                9496.0, 
+                69753.0, 
+                72854.0, 
+                267217.0, 
+                211734.0, 
+                272008.0, 
+                69537.0, 
+                444810.0, 
+                68355.0, 
+                274905.0, 
+                92674.0, 
+                93030.0, 
+                8027.0, 
+                5500.0, 
+                241960.0, 
+                266540.0, 
+                429672.0, 
+                0.0, 
+                7466.0, 
+                96322.0, 
+                42797.0, 
+                74635.0, 
+                90782.0, 
+                6211.0, 
+                265173.0, 
+                1752.0, 
+                239602.0, 
+                405011.0, 
+                416722.0, 
+                279189.0, 
+                441269.0, 
+                8077.0, 
+                416851.0, 
+                281431.0, 
+                78581.0, 
+                246026.0, 
+                71822.0, 
+                74946.0, 
+                411008.0
+            ]
+        }
+    ], 
+    "title": [
+        {
+            "textStyle": {
+                "fontSize": 18
+            }, 
+            "top": "auto", 
+            "subtextStyle": {
+                "fontSize": 12
+            }, 
+            "left": "auto"
+        }
+    ], 
+    "tooltip": {
+        "borderColor": "#333", 
+        "axisPointer": {
+            "type": "line"
+        }, 
+        "textStyle": {
+            "fontSize": 14
+        }, 
+        "trigger": "item", 
+        "borderWidth": 0, 
+        "backgroundColor": "rgba(50,50,50,0.7)", 
+        "triggerOn": "mousemove|click"
+    }, 
+    "series_id": 3965333, 
+    "xAxis": [
+        {
+            "nameLocation": "middle", 
+            "axisTick": {
+                "alignWithLabel": false
+            }, 
+            "inverse": false, 
+            "show": true, 
+            "type": "category", 
+            "axisLabel": {
+                "textStyle": {
+                    "fontSize": 12
+                }, 
+                "interval": "auto", 
+                "margin": 8, 
+                "rotate": 0
+            }, 
+            "splitLine": {
+                "show": false
+            }, 
+            "boundaryGap": true, 
+            "nameTextStyle": {
+                "fontSize": 14
+            }, 
+            "nameGap": 25, 
+            "data": [
+                "134.64.229.112 ", 
+                "134.64.229.249 ", 
+                "134.64.229.236 ", 
+                "134.64.229.226 ", 
+                "134.64.229.12  ", 
+                "134.64.229.106 ", 
+                "134.64.229.9   ", 
+                "134.64.229.245 ", 
+                "134.64.229.104 ", 
+                "134.64.229.238 ", 
+                "134.64.229.161 ", 
+                "134.64.229.4   ", 
+                "134.64.229.155 ", 
+                "134.64.229.163 ", 
+                "134.64.229.110 ", 
+                "134.64.229.157 ", 
+                "134.64.229.234 ", 
+                "134.64.229.165 ", 
+                "134.64.229.162 ", 
+                "134.64.229.8   ", 
+                "134.64.229.231 ", 
+                "134.64.229.159 ", 
+                "134.64.229.109 ", 
+                "134.64.229.229 ", 
+                "134.64.229.239 ", 
+                "134.64.229.102 ", 
+                "134.64.229.247 ", 
+                "134.64.229.248 ", 
+                "134.64.229.230 ", 
+                "134.64.229.7   ", 
+                "134.64.229.235 ", 
+                "134.64.229.244 ", 
+                "134.64.228.201 ", 
+                "134.64.229.243 ", 
+                "134.64.229.237 ", 
+                "134.64.229.164 ", 
+                "134.64.229.158 ", 
+                "134.64.229.107 ", 
+                "134.64.229.105 ", 
+                "134.64.229.11  ", 
+                "134.64.229.233 ", 
+                "134.64.228.190 ", 
+                "134.64.229.5   ", 
+                "134.64.229.101 ", 
+                "134.64.229.154 ", 
+                "134.64.229.160 ", 
+                "134.64.229.241 ", 
+                "134.64.229.156 ", 
+                "134.64.229.103 ", 
+                "134.64.229.232 ", 
+                "134.64.229.111 ", 
+                "134.64.229.6   ", 
+                "134.64.228.200 ", 
+                "134.64.228.198 ", 
+                "134.64.229.228 ", 
+                "134.64.228.197 ", 
+                "134.64.229.108 ", 
+                "134.64.228.199 ", 
+                "134.64.229.227 ", 
+                "134.64.229.246 ", 
+                "134.64.229.10  ", 
+                "134.64.229.240 ", 
+                "134.64.229.242 ", 
+                "134.64.228.196 "
+            ]
+        }
+    ], 
+    "dataZoom": [
+        {
+            "start": 10, 
+            "type": "slider", 
+            "end": 25, 
+            "orient": "horizontal", 
+            "show": true
+        }, 
+        {
+            "start": 10, 
+            "type": "inside", 
+            "end": 25, 
+            "orient": "horizontal", 
+            "show": true
+        }
+    ], 
+    "toolbox": {
+        "orient": "vertical", 
+        "top": "center", 
+        "show": true, 
+        "feature": {
+            "magicType": {
+                "show": true, 
+                "type": [
+                    "line", 
+                    "bar", 
+                    "stack", 
+                    "tiled"
+                ], 
+                "title": {
+                    "line": "\u6298\u7ebf\u56fe", 
+                    "bar": "\u67f1\u72b6\u56fe", 
+                    "stack": "\u5806\u53e0", 
+                    "tiled": "\u5e73\u94fa"
+                }
+            }, 
+            "restore": {
+                "show": true
+            }, 
+            "dataView": {
+                "show": true
+            }, 
+            "saveAsImage": {
+                "show": true, 
+                "title": "\u4e0b\u8f7d\u56fe\u7247"
+            }, 
+            "dataZoom": {
+                "show": true, 
+                "title": {
+                    "zoom": "\u533a\u57df\u7f29\u653e", 
+                    "back": "\u7f29\u653e\u8fd8\u539f"
+                }
+            }
+        }, 
+        "left": "95%"
+    }, 
+    "legend": [
+        {
+            "textStyle": {
+                "fontSize": 12
+            }, 
+            "show": true, 
+            "top": "top", 
+            "selectedMode": "multiple", 
+            "data": [
+                "2018-07-12\u5b9e\u9645\u91cf", 
+                "2018-07-12\u91c7\u96c6\u91cf", 
+                "2018-07-12ES\u6570\u636e\u91cf", 
+                "2018-07-12HDFS\u6570\u636e\u91cf"
+            ], 
+            "orient": "horizontal", 
+            "left": "center"
+        }
+    ]
+};
+myChart.setOption(option_f9883ff1f426403e8569bed035c10301);
+
+    layui.use(['element'], function(){
+        var element = layui.element
+            ,$      = layui.jquery;
+
+        // you code ...
+
+
+    });
+</script>
+</body>
+</html>
