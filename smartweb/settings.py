@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'login',
     'index',
     'debug_toolbar',
-    'LogStatistics',
      
 ]
 
