@@ -26,9 +26,9 @@ def user_login(request):
         if user :
             # return render_to_response('index.html',context=csrf(request))
             return HttpResponseRedirect('/index/')
-            res= HttpResponseRedirect('/index/')
+            # res= HttpResponseRedirect('/index/')
             # res= HttpResponse('/index/')
-            res.set_cookies('user',username,max_age=3600)
+            # res.set_cookies('user',username,max_age=3600)
             return res
            
         else:

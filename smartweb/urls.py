@@ -19,12 +19,13 @@ from login import views as loginView
 from index import views as indexView
 from django.conf import settings
 from django.conf.urls import include
-
+from LogStatistics import views as logstatisticsView
 # from django.views.generic.simple import redirect_to 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^login/',loginView.user_login,name='login'),
     url(r'^index/',indexView.index_fuc,name='index'),
+    url(r'^tables/',logstatisticsView.logstatics,name="tables"),
     url(r'',loginView.user_login,name="login"),
 
 
