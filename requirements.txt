@@ -53,7 +53,7 @@ decorator==4.1.2
 dis3==0.1.2
 distlib==0.2.5
 distributed==1.19.1
-Django==1.11.12
+Django==1.11.28
 django-debug-toolbar==1.9.1
 dnspython==1.15.0
 docutils==0.14
