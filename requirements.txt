@@ -171,7 +171,7 @@ pyecharts-javascripthon==0.0.6
 pyecharts-jupyter-installer==0.0.3
 pyecharts-snapshot==0.1.7
 pyflakes==1.6.0
-Pygments==2.2.0
+Pygments==2.7.4
 PyInstaller==3.3.1
 pylint==1.7.4
 PyNaCl==1.2.1
