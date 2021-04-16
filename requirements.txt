@@ -54,7 +54,7 @@ dis3==0.1.2
 distlib==0.2.5
 distributed==1.19.1
 Django==1.11.12
-django-debug-toolbar==1.9.1
+django-debug-toolbar==1.11.1
 dnspython==1.15.0
 docutils==0.14
 echarts-china-provinces-pypkg==0.0.2
