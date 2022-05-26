@@ -227,7 +227,7 @@ thrift==0.9.3
 toolz==0.8.2
 tornado==4.5.2
 traitlets==4.3.2
-Twisted==18.4.0
+Twisted==22.4.0
 typing==3.6.2
 tzlocal==1.5.1
 unicodecsv==0.14.1
